@@ -1,0 +1,63 @@
+.logoutBtn,
+.dashboardBtn {
+    padding: 4px 20px !important;
+    border: 2px solid #fff !important;
+    color: #fff !important;
+}
+
+.logoutBtn:hover,
+.dashboardBtn:hover {
+    color: #7749f8 !important;
+    background-color: #fff !important;
+}
+
+
+.editProfileArea {
+    background-color: #ddd;
+    padding: 20px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.editImageArea {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 10px;
+}
+
+.profileImage {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+}
+
+.profileImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+.editNameArea {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.editNameArea input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 4px 6px !important;
+}
+
+.editProfileBtn {
+    border: none;
+    background-color: #7749f8;
+    padding: 6px 10px !important;
+    color: #fff;
+    border-radius: 4px;
+}

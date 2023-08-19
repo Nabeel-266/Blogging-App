@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging App</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font-Awesome-Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Main Body Container -->
+    <div id="main" class="container-fluid g-0 p-0">
+
+        <!---------------- Login Form ---------------->
+        <form class="loginForm">
+            <!-- Login Form Header -->
+            <div class="formHeader">
+                <!-- <div class="logo">
+                    <i class="fa-solid fa-dove fa-shake"></i>
+                </div> -->
+                <div class="heading">
+                    <h1 class="m-0">Sign in</h1>
+                </div>
+            </div>
+
+            <!-- Login Form Body -->
+            <fieldset class="loginFieldset">
+                <!-- For Email or Mobile Number Input -->
+                <label for="email/phoneNumber">Email or Phone Number</label>
+                <div class="inputType">
+                    <input type="text" id="loginEmail" name="email/phoneNumber"
+                        placeholder="Email Address or Phone Number" required>
+                </div>
+                <!-- Email Message -->
+                <p class="emailMessage m-0 hide"></p>
+
+                <!-- For Password Input -->
+                <label for="password">Password</label>
+                <div class="inputType">
+                    <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+                    <span class="checkeye">
+                        <i class="fa-solid fa-eye-slash" aria-hidden="true" class="eyeBtn"
+                            onclick="toggleEyeBtn(this)"></i>
+                    </span>
+                </div>
+                <!-- Password Message -->
+                <p class="passwordMessage m-0 hide"></p>
+
+                <!-- For Login Button -->
+                <button type="button" class="logInBtn">Log in</button>
+
+                <!-- For Account Creation Link -->
+                <span class="creationAccount">
+                    Don't have an account?
+                    <a class="createAccountLink" onclick="openCreateAccountModal()">Create Account</a>
+                </span>
+            </fieldset>
+        </form>
+
+
+        <!---------------- Create Account Modal ---------------->
+        <div class="createAccountModal">
+            <!-- For Cancel Button -->
+            <button type="button" class="cancelBtn" onclick="closeCreateAccountModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <!-- For Signup Header -->
+            <div class="signUpHeader">
+                <div class="crteAcntHeading">
+                    <h1 class="m-0">SignUp Here</h1>
+                </div>
+            </div>
+
+            <!-- For Signup Body -->
+            <fieldset class="signUpFieldset">
+                <!-- For Name Inputs -->
+                <section class="forName">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </section>
+
+                <!-- For Email Input -->
+                <section class="forEmail">
+                    <input type="email" id="signupEmail" placeholder="Email Address" required>
+                </section>
+
+                <!-- For Password Inputs -->
+                <section class="forPassword">
+                    <div class="signUpPass">
+                        <input type="password" id="signUpPassword" name="password" placeholder="Password" required>
+                        <span class="checkeye">
+                            <i class="fa-solid fa-eye-slash" aria-hidden="true" class="eyeBtn"
+                                onclick="toggleEyeBtn(this)"></i>
+                        </span>
+                    </div>
+                </section>
+
+                <section class="forConfirmPassword">
+                    <div class="signUpConfirmPass">
+                        <input type="password" id="signUpConfirmPassword" name="password" placeholder="Confirm Password"
+                            required>
+                        <span class="checkeye">
+                            <i class="fa-solid fa-eye-slash" aria-hidden="true" class="eyeBtn"
+                                onclick="toggleEyeBtn(this)"></i>
+                        </span>
+                    </div>
+                </section>
+
+                <!-- For Sign up Button -->
+                <button type="submit" class="signUpBtn">Create Account</button>
+            </fieldset>
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
